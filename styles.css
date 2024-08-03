@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,6 +8,7 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #89CFF0; /* Baby blue */
     color: white;
@@ -37,6 +39,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
     margin: 20px 0;
@@ -44,10 +47,12 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Colors for Sections */
 h2 {
-    color: #89CFF0; /* Baby blue for headers */
+    color: #89CFF0; /* Baby blue for section headers */
 }
 
+/* List Styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -57,6 +62,7 @@ ul li {
     margin: 10px 0;
 }
 
+/* Experience, Education, and Publication Styles */
 .experience, .education, .publication {
     margin-bottom: 20px;
 }
@@ -70,14 +76,20 @@ ul li {
     margin: 0 0 10px;
 }
 
-.project a, .experience a, .education a, .publication a {
-    color: #89CFF0; /* Link color */
+/* Link Styles */
+a {
+    color: #89CFF0; /* Baby blue for links */
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #333; /* Dark grey for footer */
     color: white;
 }
