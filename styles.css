@@ -3,12 +3,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Light baby blue background */
     color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #89CFF0; /* Baby blue */
     color: white;
     padding: 20px;
     text-align: center;
@@ -45,7 +45,7 @@ section {
 }
 
 h2 {
-    color: #4CAF50;
+    color: #89CFF0; /* Baby blue for headers */
 }
 
 ul {
@@ -71,7 +71,7 @@ ul li {
 }
 
 .project a, .experience a, .education a, .publication a {
-    color: #4CAF50;
+    color: #89CFF0; /* Link color */
     text-decoration: none;
 }
 
