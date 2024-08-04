@@ -52,6 +52,27 @@ h2 {
     color: #89CFF0; /* Baby blue for section headers */
 }
 
+/* Project Styles */
+.project {
+    margin-bottom: 20px;
+}
+
+/* Project Links Styles */
+.project-links {
+    margin-top: 10px;
+}
+
+.project-links a {
+    margin-right: 15px;
+    color: #89CFF0; /* Baby blue color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
 /* List Styles */
 ul {
     list-style-type: none;
@@ -124,4 +145,11 @@ footer {
 
 #about-contact .contact-icon:hover {
     transform: scale(1.1);
+}
+
+/* Container for centralizing content */
+.container {
+    max-width: 1200px; /* You can adjust this value as needed */
+    margin: 0 auto;
+    padding: 0 20px; /* Adds padding on the sides */
 }
