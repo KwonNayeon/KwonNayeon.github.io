@@ -113,13 +113,17 @@ footer {
     padding: 20px;
     background-color: #333; /* Dark grey for footer */
     color: white;
+    font-size: 0.9em; /* Slightly smaller text for footer */
 }
 
-/* Creative Commons Logo Styles */
+footer p {
+    margin: 0;
+}
+
 .cc-logo {
-    width: 100px; /* Adjust size as needed */
+    margin-top: 10px;
+    width: 50px; /* Adjust size as needed */
     height: auto;
-    margin-top: 10px; /* Space above the logo */
 }
 
 /* Footer Text Styling */
