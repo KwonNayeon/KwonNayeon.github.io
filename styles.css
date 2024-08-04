@@ -96,19 +96,21 @@ footer {
 
 /* About Me & Contact Styles */
 #about-contact {
-    padding: 40px 20px; /* Adjusted padding for better spacing */
-    background-color: #f9f9f9; /* Optional: Light background for contrast */
+    padding: 20px;
+    margin: 0; /* Remove margin to align with other sections */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #about-contact .about-me {
-    max-width: 800px; /* Limits the width for better readability */
-    margin: 0 auto; /* Center the block itself */
-    text-align: left; /* Aligns text to the left */
+    max-width: 800px; /* Limit width for readability */
+    margin: 0; /* Align with other sections */
+    text-align: left; /* Left-align text */
 }
 
 #about-contact .contact-icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align icons to the start (left) */
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 20px; /* Space between text and icons */
