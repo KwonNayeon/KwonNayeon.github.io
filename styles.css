@@ -186,5 +186,5 @@ footer a:hover {
 .container {
     max-width: 1200px; /* You can adjust this value as needed */
     margin: 0 auto;
-    padding: 0 20px; /* Adds padding on the sides */
+    padding: 0 15px; /* Adds padding on the sides */
 }
