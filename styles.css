@@ -129,6 +129,16 @@ footer {
     text-align: left; /* Left-align text */
 }
 
+#about-contact .about-me h3 {
+    color: #89CFF0; /* Baby blue for sub-headers */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#about-contact .about-me p {
+    margin-bottom: 20px;
+}
+
 #about-contact .contact-icons {
     display: flex;
     justify-content: flex-start; /* Align icons to the start (left) */
