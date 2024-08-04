@@ -115,6 +115,27 @@ footer {
     color: white;
 }
 
+/* Creative Commons Logo Styles */
+.cc-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 10px; /* Space above the logo */
+}
+
+/* Footer Text Styling */
+footer p {
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+footer a {
+    color: #89CFF0; /* Baby blue for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* About Me & Contact Styles */
 #about-contact {
     padding: 20px;
