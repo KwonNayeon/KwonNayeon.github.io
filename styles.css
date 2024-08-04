@@ -93,3 +93,30 @@ footer {
     background-color: #333; /* Dark grey for footer */
     color: white;
 }
+
+/* About Me & Contact Styles */
+#about-contact {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#about-contact .about-me {
+    margin-bottom: 20px;
+}
+
+#about-contact .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#about-contact .contact-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    transition: transform 0.3s ease;
+}
+
+#about-contact .contact-icon:hover {
+    transform: scale(1.1);
+}
