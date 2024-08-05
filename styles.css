@@ -24,6 +24,7 @@ header p {
     font-size: 1.2em;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -83,17 +84,17 @@ ul li {
     margin: 10px 0;
 }
 
-/* Experience, Education, and Publication Styles */
-.experience, .education, .publication {
+/* Experience, Education & Honors, and Publication Styles */
+.experience, .education-honors, .publication {
     margin-bottom: 20px;
 }
 
-.experience h3, .education h3, .publication h3 {
+.experience h3, .education-honors h3, .publication h3 {
     margin: 0 0 10px;
     color: #333;
 }
 
-.experience p, .education p, .publication p {
+.experience p, .education-honors p, .publication p {
     margin: 0 0 10px;
 }
 
@@ -110,7 +111,7 @@ a:hover {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px 20px; /* Reduce padding to make the footer smaller */
     background-color: #333; /* Dark grey for footer */
     color: white;
     font-size: 0.9em; /* Slightly smaller text for footer */
@@ -122,7 +123,7 @@ footer p {
 
 .cc-logo {
     margin-top: 10px;
-    width: 100px; /* Adjust size as needed */
+    width: 50px; /* Reduce size for better appearance */
     height: auto;
 }
 
