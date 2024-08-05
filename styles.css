@@ -189,3 +189,29 @@ footer a:hover {
     margin: 0 auto;
     padding: 0 15px; /* Adds padding on the sides */
 }
+
+/* Volunteering Section Styles */
+#volunteering {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#volunteering h2 {
+    color: #89CFF0; /* Baby blue for section headers */
+    margin-bottom: 20px;
+}
+
+.volunteering-entry {
+    margin-bottom: 20px;
+}
+
+.volunteering-entry h3 {
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.volunteering-entry p {
+    margin: 0 0 10px;
+}
