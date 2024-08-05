@@ -183,13 +183,6 @@ footer a:hover {
     transform: scale(1.1);
 }
 
-/* Container for centralizing content */
-.container {
-    max-width: 1200px; /* You can adjust this value as needed */
-    margin: 0 auto;
-    padding: 0 15px; /* Adds padding on the sides */
-}
-
 /* Volunteering Section Styles */
 #volunteering {
     padding: 20px;
@@ -214,4 +207,11 @@ footer a:hover {
 
 .volunteering-entry p {
     margin: 0 0 10px;
+}
+
+/* Container for centralizing content */
+.container {
+    max-width: 1200px; /* You can adjust this value as needed */
+    margin: 0 auto;
+    padding: 0 15px; /* Adds padding on the sides */
 }
