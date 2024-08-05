@@ -186,27 +186,27 @@ footer a:hover {
 /* Volunteering Section Styles */
 #volunteering {
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px 0; /* Align margin with other sections */
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #volunteering h2 {
     color: #89CFF0; /* Baby blue for section headers */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Consistent with other section headers */
 }
 
 .volunteering-entry {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Consistent spacing between entries */
 }
 
 .volunteering-entry h3 {
     color: #333;
-    margin: 0 0 10px;
+    margin: 0 0 10px; /* Consistent with other section sub-headers */
 }
 
 .volunteering-entry p {
-    margin: 0 0 10px;
+    margin: 0 0 10px; /* Consistent with other sections */
 }
 
 /* Container for centralizing content */
