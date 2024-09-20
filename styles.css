@@ -70,9 +70,8 @@ h2 {
     padding: 0;
 }
 
-/* Skills Section Styles */
 #skills ul li {
-    color: #89CFF0; /* Baby blue text for skills */
+    color: #333; /* Baby blue text for skills */
     margin-bottom: 10px; /* Space between list items */
 }
 
