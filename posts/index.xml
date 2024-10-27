@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nayeon Kwon</title>
-    <link>https://kwonnayeon.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Nayeon Kwon</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Oct 2024 18:50:12 +0900</lastBuildDate>
-    <atom:link href="https://kwonnayeon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Reduce an Insecurity Mindset as a Job Seeker</title>
-      <link>https://kwonnayeon.github.io/posts/post/</link>
-      <pubDate>Sun, 27 Oct 2024 18:50:12 +0900</pubDate>
-      <guid>https://kwonnayeon.github.io/posts/post/</guid>
-      <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;&#xA;&lt;p&gt;Job searching can be emotionally challenging, often leading to self-doubt. I know this all too well because I am a job seeker, seeking new opportunities in Canada, as a person with all my educational and work experience in Korea.&lt;/p&gt;&#xA;&lt;p&gt;It has been almost three months since I started seeking a job, so I want to share the insights I&amp;rsquo;ve gained from this journey. I&amp;rsquo;ll discuss how to focus on building healthy habits and shifting your mindset, and how to navigate this journey with more confidence. I want you to know, if you are a job seeker, that you are not alone!&lt;/p&gt;</description>
+      <link>http://localhost:1313/posts/post/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/post/</guid>
+      <description>A personal reflection on navigating insecurity during job searching, sharing insights and strategies for building confidence and maintaining a positive mindset.</description>
     </item>
   </channel>
 </rss>
