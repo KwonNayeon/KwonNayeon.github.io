@@ -242,14 +242,14 @@
 <h2 id="basic-word-cloud-creation">Basic Word Cloud Creation</h2>
 <h3 id="using-the-wordcloud-library">Using the &lsquo;wordcloud&rsquo; Library</h3>
 <p><strong>Installation</strong>: Ensure you have the necessary libraries installed. You can install them using pip if they&rsquo;re not already available:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install wordcloud matplotlib numpy pillow
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install wordcloud matplotlib numpy pillow
 </span></span></code></pre></div><p><strong>Importing Libraries</strong>: Import the required libraries for creating and visualizing word clouds:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#179299">from</span> <span style="color:#fe640b">wordcloud</span> <span style="color:#179299">import</span> WordCloud, STOPWORDS
-</span></span><span style="display:flex;"><span><span style="color:#179299">import</span> <span style="color:#fe640b">matplotlib.pyplot</span> <span style="color:#8839ef">as</span> <span style="color:#fe640b">plt</span>
-</span></span><span style="display:flex;"><span><span style="color:#179299">import</span> <span style="color:#fe640b">numpy</span> <span style="color:#8839ef">as</span> <span style="color:#fe640b">np</span>
-</span></span><span style="display:flex;"><span><span style="color:#179299">from</span> <span style="color:#fe640b">PIL</span> <span style="color:#179299">import</span> Image
-</span></span><span style="display:flex;"><span><span style="color:#179299">from</span> <span style="color:#fe640b">matplotlib.colors</span> <span style="color:#179299">import</span> LinearSegmentedColormap
-</span></span><span style="display:flex;"><span><span style="color:#179299">import</span> <span style="color:#fe640b">re</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff6ac1">from</span> wordcloud <span style="color:#ff6ac1">import</span> WordCloud, STOPWORDS
+</span></span><span style="display:flex;"><span><span style="color:#ff6ac1">import</span> matplotlib.pyplot <span style="color:#ff6ac1">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#ff6ac1">import</span> numpy <span style="color:#ff6ac1">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#ff6ac1">from</span> PIL <span style="color:#ff6ac1">import</span> Image
+</span></span><span style="display:flex;"><span><span style="color:#ff6ac1">from</span> matplotlib.colors <span style="color:#ff6ac1">import</span> LinearSegmentedColormap
+</span></span><span style="display:flex;"><span><span style="color:#ff6ac1">import</span> re
 </span></span></code></pre></div><p><strong>Basic Parameters</strong>: When creating a word cloud, you can customize several parameters to control its appearance:</p>
 <ul>
 <li><code>width</code> <strong>and</strong> <code>height</code>: Define the dimensions of the word cloud.</li>
@@ -257,22 +257,22 @@
 <li><code>max_words</code>: Limits the maximum number of words displayed.</li>
 </ul>
 <p><strong>Generating a Simple Word Cloud</strong>: Here&rsquo;s a basic example of generating a word cloud using the default settings:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Define your text data</span>
-</span></span><span style="display:flex;"><span>text <span style="color:#04a5e5;font-weight:bold">=</span> <span style="color:#40a02b">&#34;Your sample text data goes here.&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#78787e"># Define your text data</span>
+</span></span><span style="display:flex;"><span>text <span style="color:#ff6ac1">=</span> <span style="color:#5af78e">&#34;Your sample text data goes here.&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Generate a basic word cloud</span>
-</span></span><span style="display:flex;"><span>wordcloud <span style="color:#04a5e5;font-weight:bold">=</span> WordCloud(
-</span></span><span style="display:flex;"><span>    width<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">800</span>,  <span style="color:#9ca0b0;font-style:italic"># Set the width of the word cloud</span>
-</span></span><span style="display:flex;"><span>    height<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">400</span>,  <span style="color:#9ca0b0;font-style:italic"># Set the height of the word cloud</span>
-</span></span><span style="display:flex;"><span>    background_color<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;white&#39;</span>  <span style="color:#9ca0b0;font-style:italic"># Set the background color</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#04a5e5;font-weight:bold">.</span>generate(text)
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Generate a basic word cloud</span>
+</span></span><span style="display:flex;"><span>wordcloud <span style="color:#ff6ac1">=</span> WordCloud(
+</span></span><span style="display:flex;"><span>    width<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">800</span>,  <span style="color:#78787e"># Set the width of the word cloud</span>
+</span></span><span style="display:flex;"><span>    height<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">400</span>,  <span style="color:#78787e"># Set the height of the word cloud</span>
+</span></span><span style="display:flex;"><span>    background_color<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;white&#39;</span>  <span style="color:#78787e"># Set the background color</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#ff6ac1">.</span>generate(text)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Display the word cloud</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>figure(figsize<span style="color:#04a5e5;font-weight:bold">=</span>(<span style="color:#fe640b">10</span>, <span style="color:#fe640b">5</span>))  <span style="color:#9ca0b0;font-style:italic"># Adjust the figure size</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>imshow(wordcloud, interpolation<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;bilinear&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Smooth rendering</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>axis(<span style="color:#40a02b">&#39;off&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Hide the axis</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>title(<span style="color:#40a02b">&#39;Basic Word Cloud&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Add a title</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>show()  <span style="color:#9ca0b0;font-style:italic"># Render the plot</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Display the word cloud</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>figure(figsize<span style="color:#ff6ac1">=</span>(<span style="color:#ff9f43">10</span>, <span style="color:#ff9f43">5</span>))  <span style="color:#78787e"># Adjust the figure size</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>imshow(wordcloud, interpolation<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;bilinear&#39;</span>)  <span style="color:#78787e"># Smooth rendering</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>axis(<span style="color:#5af78e">&#39;off&#39;</span>)  <span style="color:#78787e"># Hide the axis</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>title(<span style="color:#5af78e">&#39;Basic Word Cloud&#39;</span>)  <span style="color:#78787e"># Add a title</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>show()  <span style="color:#78787e"># Render the plot</span>
 </span></span></code></pre></div><p><strong>Explanation</strong>:</p>
 <ul>
 <li><code>WordCloud</code> <strong>Constructor</strong>: Creates a <code>WordCloud</code> object with specified dimensions and background color.</li>
@@ -312,37 +312,37 @@
 </li>
 </ul>
 <p>Here&rsquo;s the code that demonstrates these steps:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Define custom stopwords</span>
-</span></span><span style="display:flex;"><span>custom_stopwords <span style="color:#04a5e5;font-weight:bold">=</span> <span style="color:#04a5e5">set</span>(STOPWORDS)<span style="color:#04a5e5;font-weight:bold">.</span>union({
-</span></span><span style="display:flex;"><span>    <span style="color:#40a02b">&#39;RT&#39;</span>, <span style="color:#40a02b">&#39;https&#39;</span>, <span style="color:#40a02b">&#39;the&#39;</span>, <span style="color:#40a02b">&#39;and&#39;</span>, <span style="color:#40a02b">&#39;of&#39;</span>, <span style="color:#40a02b">&#39;to&#39;</span>, <span style="color:#40a02b">&#39;will&#39;</span>, <span style="color:#40a02b">&#39;much&#39;</span>, <span style="color:#40a02b">&#39;see&#39;</span>, <span style="color:#40a02b">&#39;now&#39;</span>, <span style="color:#40a02b">&#39;seen&#39;</span>, 
-</span></span><span style="display:flex;"><span>    <span style="color:#40a02b">&#39;come&#39;</span>, <span style="color:#40a02b">&#39;know&#39;</span>, <span style="color:#40a02b">&#39;haa&#39;</span>, <span style="color:#40a02b">&#39;football club&#39;</span>, <span style="color:#40a02b">&#39;even&#39;</span>, <span style="color:#40a02b">&#39;t&#39;</span>, <span style="color:#40a02b">&#39;co&#39;</span>, <span style="color:#40a02b">&#39;f1oki f1okidao&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#40a02b">&#39;far&#39;</span>, <span style="color:#40a02b">&#39;take&#39;</span>, <span style="color:#40a02b">&#39;don&#39;</span>, <span style="color:#40a02b">&#39;f1okidao&#39;</span>, <span style="color:#40a02b">&#39;f1okidao doge&#39;</span>, <span style="color:#40a02b">&#39;thing&#39;</span>, 
-</span></span><span style="display:flex;"><span>    <span style="color:#40a02b">&#39;got&#39;</span>, <span style="color:#40a02b">&#39;really&#39;</span>, <span style="color:#40a02b">&#39;s&#39;</span>, <span style="color:#40a02b">&#39;u&#39;</span>, <span style="color:#40a02b">&#39;still&#39;</span>, <span style="color:#40a02b">&#39;way&#39;</span>, <span style="color:#40a02b">&#39;f1&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#78787e"># Define custom stopwords</span>
+</span></span><span style="display:flex;"><span>custom_stopwords <span style="color:#ff6ac1">=</span> <span style="color:#ff5c57">set</span>(STOPWORDS)<span style="color:#ff6ac1">.</span>union({
+</span></span><span style="display:flex;"><span>    <span style="color:#5af78e">&#39;RT&#39;</span>, <span style="color:#5af78e">&#39;https&#39;</span>, <span style="color:#5af78e">&#39;the&#39;</span>, <span style="color:#5af78e">&#39;and&#39;</span>, <span style="color:#5af78e">&#39;of&#39;</span>, <span style="color:#5af78e">&#39;to&#39;</span>, <span style="color:#5af78e">&#39;will&#39;</span>, <span style="color:#5af78e">&#39;much&#39;</span>, <span style="color:#5af78e">&#39;see&#39;</span>, <span style="color:#5af78e">&#39;now&#39;</span>, <span style="color:#5af78e">&#39;seen&#39;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#5af78e">&#39;come&#39;</span>, <span style="color:#5af78e">&#39;know&#39;</span>, <span style="color:#5af78e">&#39;haa&#39;</span>, <span style="color:#5af78e">&#39;football club&#39;</span>, <span style="color:#5af78e">&#39;even&#39;</span>, <span style="color:#5af78e">&#39;t&#39;</span>, <span style="color:#5af78e">&#39;co&#39;</span>, <span style="color:#5af78e">&#39;f1oki f1okidao&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#5af78e">&#39;far&#39;</span>, <span style="color:#5af78e">&#39;take&#39;</span>, <span style="color:#5af78e">&#39;don&#39;</span>, <span style="color:#5af78e">&#39;f1okidao&#39;</span>, <span style="color:#5af78e">&#39;f1okidao doge&#39;</span>, <span style="color:#5af78e">&#39;thing&#39;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#5af78e">&#39;got&#39;</span>, <span style="color:#5af78e">&#39;really&#39;</span>, <span style="color:#5af78e">&#39;s&#39;</span>, <span style="color:#5af78e">&#39;u&#39;</span>, <span style="color:#5af78e">&#39;still&#39;</span>, <span style="color:#5af78e">&#39;way&#39;</span>, <span style="color:#5af78e">&#39;f1&#39;</span>
 </span></span><span style="display:flex;"><span>})
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Combine all text data into a single string without changing case</span>
-</span></span><span style="display:flex;"><span>all_text <span style="color:#04a5e5;font-weight:bold">=</span> <span style="color:#40a02b">&#39; &#39;</span><span style="color:#04a5e5;font-weight:bold">.</span>join(f1[<span style="color:#40a02b">&#39;text&#39;</span>]<span style="color:#04a5e5;font-weight:bold">.</span>fillna(<span style="color:#40a02b">&#39;&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Combine all text data into a single string without changing case</span>
+</span></span><span style="display:flex;"><span>all_text <span style="color:#ff6ac1">=</span> <span style="color:#5af78e">&#39; &#39;</span><span style="color:#ff6ac1">.</span>join(f1[<span style="color:#5af78e">&#39;text&#39;</span>]<span style="color:#ff6ac1">.</span>fillna(<span style="color:#5af78e">&#39;&#39;</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Remove unnecessary variations and normalize terms like &#34;F1&#34;</span>
-</span></span><span style="display:flex;"><span>all_text <span style="color:#04a5e5;font-weight:bold">=</span> re<span style="color:#04a5e5;font-weight:bold">.</span>sub(<span style="color:#d20f39">r</span><span style="color:#40a02b">&#39;\bf1\b&#39;</span>, <span style="color:#40a02b">&#39;F1&#39;</span>, all_text, flags<span style="color:#04a5e5;font-weight:bold">=</span>re<span style="color:#04a5e5;font-weight:bold">.</span>IGNORECASE)  <span style="color:#9ca0b0;font-style:italic"># Replace &#34;f1&#34; with &#34;F1&#34;</span>
-</span></span><span style="display:flex;"><span>all_text <span style="color:#04a5e5;font-weight:bold">=</span> re<span style="color:#04a5e5;font-weight:bold">.</span>sub(<span style="color:#d20f39">r</span><span style="color:#40a02b">&#39;#f1\b&#39;</span>, <span style="color:#40a02b">&#39;F1&#39;</span>, all_text, flags<span style="color:#04a5e5;font-weight:bold">=</span>re<span style="color:#04a5e5;font-weight:bold">.</span>IGNORECASE)  <span style="color:#9ca0b0;font-style:italic"># Replace #f1 with F1</span>
-</span></span><span style="display:flex;"><span>all_text <span style="color:#04a5e5;font-weight:bold">=</span> re<span style="color:#04a5e5;font-weight:bold">.</span>sub(<span style="color:#d20f39">r</span><span style="color:#40a02b">&#39;\bf1gp\b&#39;</span>, <span style="color:#40a02b">&#39;F1&#39;</span>, all_text, flags<span style="color:#04a5e5;font-weight:bold">=</span>re<span style="color:#04a5e5;font-weight:bold">.</span>IGNORECASE)  <span style="color:#9ca0b0;font-style:italic"># Replace f1gp with F1</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Remove unnecessary variations and normalize terms like &#34;F1&#34;</span>
+</span></span><span style="display:flex;"><span>all_text <span style="color:#ff6ac1">=</span> re<span style="color:#ff6ac1">.</span>sub(<span style="color:#5af78e">r</span><span style="color:#5af78e">&#39;\bf1\b&#39;</span>, <span style="color:#5af78e">&#39;F1&#39;</span>, all_text, flags<span style="color:#ff6ac1">=</span>re<span style="color:#ff6ac1">.</span>IGNORECASE)  <span style="color:#78787e"># Replace &#34;f1&#34; with &#34;F1&#34;</span>
+</span></span><span style="display:flex;"><span>all_text <span style="color:#ff6ac1">=</span> re<span style="color:#ff6ac1">.</span>sub(<span style="color:#5af78e">r</span><span style="color:#5af78e">&#39;#f1\b&#39;</span>, <span style="color:#5af78e">&#39;F1&#39;</span>, all_text, flags<span style="color:#ff6ac1">=</span>re<span style="color:#ff6ac1">.</span>IGNORECASE)  <span style="color:#78787e"># Replace #f1 with F1</span>
+</span></span><span style="display:flex;"><span>all_text <span style="color:#ff6ac1">=</span> re<span style="color:#ff6ac1">.</span>sub(<span style="color:#5af78e">r</span><span style="color:#5af78e">&#39;\bf1gp\b&#39;</span>, <span style="color:#5af78e">&#39;F1&#39;</span>, all_text, flags<span style="color:#ff6ac1">=</span>re<span style="color:#ff6ac1">.</span>IGNORECASE)  <span style="color:#78787e"># Replace f1gp with F1</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Generate the word cloud using the custom stopwords and colormap</span>
-</span></span><span style="display:flex;"><span>wordcloud <span style="color:#04a5e5;font-weight:bold">=</span> WordCloud(
-</span></span><span style="display:flex;"><span>    width<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">800</span>,
-</span></span><span style="display:flex;"><span>    height<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">400</span>,
-</span></span><span style="display:flex;"><span>    stopwords<span style="color:#04a5e5;font-weight:bold">=</span>custom_stopwords,  <span style="color:#9ca0b0;font-style:italic"># Apply custom stopwords</span>
-</span></span><span style="display:flex;"><span>    background_color<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;white&#39;</span>,  <span style="color:#9ca0b0;font-style:italic"># White background for contrast</span>
-</span></span><span style="display:flex;"><span>    colormap<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;viridis&#39;</span>  <span style="color:#9ca0b0;font-style:italic"># Custom colormap</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#04a5e5;font-weight:bold">.</span>generate(all_text)
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Generate the word cloud using the custom stopwords and colormap</span>
+</span></span><span style="display:flex;"><span>wordcloud <span style="color:#ff6ac1">=</span> WordCloud(
+</span></span><span style="display:flex;"><span>    width<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">800</span>,
+</span></span><span style="display:flex;"><span>    height<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">400</span>,
+</span></span><span style="display:flex;"><span>    stopwords<span style="color:#ff6ac1">=</span>custom_stopwords,  <span style="color:#78787e"># Apply custom stopwords</span>
+</span></span><span style="display:flex;"><span>    background_color<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;white&#39;</span>,  <span style="color:#78787e"># White background for contrast</span>
+</span></span><span style="display:flex;"><span>    colormap<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;viridis&#39;</span>  <span style="color:#78787e"># Custom colormap</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#ff6ac1">.</span>generate(all_text)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Display the word cloud</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>figure(figsize<span style="color:#04a5e5;font-weight:bold">=</span>(<span style="color:#fe640b">10</span>, <span style="color:#fe640b">6</span>))  <span style="color:#9ca0b0;font-style:italic"># Adjust the figure size for better display</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>imshow(wordcloud, interpolation<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;bilinear&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Smooth rendering</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>axis(<span style="color:#40a02b">&#39;off&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Hide the axis</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>title(<span style="color:#40a02b">&#39;Word Cloud of F1 Tweets with Custom Stopwords&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Add a title</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>show()  <span style="color:#9ca0b0;font-style:italic"># Render the plot</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Display the word cloud</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>figure(figsize<span style="color:#ff6ac1">=</span>(<span style="color:#ff9f43">10</span>, <span style="color:#ff9f43">6</span>))  <span style="color:#78787e"># Adjust the figure size for better display</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>imshow(wordcloud, interpolation<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;bilinear&#39;</span>)  <span style="color:#78787e"># Smooth rendering</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>axis(<span style="color:#5af78e">&#39;off&#39;</span>)  <span style="color:#78787e"># Hide the axis</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>title(<span style="color:#5af78e">&#39;Word Cloud of F1 Tweets with Custom Stopwords&#39;</span>)  <span style="color:#78787e"># Add a title</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>show()  <span style="color:#78787e"># Render the plot</span>
 </span></span></code></pre></div><p>
 
 
@@ -373,24 +373,24 @@
 </li>
 </ul>
 <p>Here&rsquo;s how you can create and apply a custom colormap:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Define a custom colormap inspired by F1 team-related colors</span>
-</span></span><span style="display:flex;"><span>f1_theme_cmap <span style="color:#04a5e5;font-weight:bold">=</span> LinearSegmentedColormap<span style="color:#04a5e5;font-weight:bold">.</span>from_list(<span style="color:#40a02b">&#39;f1_theme&#39;</span>, [<span style="color:#40a02b">&#39;#00D2BE&#39;</span>, <span style="color:#40a02b">&#39;#000000&#39;</span>, <span style="color:#40a02b">&#39;#C0C0C0&#39;</span>])
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#78787e"># Define a custom colormap inspired by F1 team-related colors</span>
+</span></span><span style="display:flex;"><span>f1_theme_cmap <span style="color:#ff6ac1">=</span> LinearSegmentedColormap<span style="color:#ff6ac1">.</span>from_list(<span style="color:#5af78e">&#39;f1_theme&#39;</span>, [<span style="color:#5af78e">&#39;#00D2BE&#39;</span>, <span style="color:#5af78e">&#39;#000000&#39;</span>, <span style="color:#5af78e">&#39;#C0C0C0&#39;</span>])
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Generate the word cloud using the custom colormap and stopwords</span>
-</span></span><span style="display:flex;"><span>wordcloud <span style="color:#04a5e5;font-weight:bold">=</span> WordCloud(
-</span></span><span style="display:flex;"><span>    width<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">800</span>,
-</span></span><span style="display:flex;"><span>    height<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#fe640b">400</span>,
-</span></span><span style="display:flex;"><span>    stopwords<span style="color:#04a5e5;font-weight:bold">=</span>custom_stopwords,  <span style="color:#9ca0b0;font-style:italic"># Apply custom stopwords</span>
-</span></span><span style="display:flex;"><span>    background_color<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;white&#39;</span>,  <span style="color:#9ca0b0;font-style:italic"># White background for contrast</span>
-</span></span><span style="display:flex;"><span>    colormap<span style="color:#04a5e5;font-weight:bold">=</span>f1_theme_cmap  <span style="color:#9ca0b0;font-style:italic"># Use the custom colormap</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#04a5e5;font-weight:bold">.</span>generate(all_text)
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Generate the word cloud using the custom colormap and stopwords</span>
+</span></span><span style="display:flex;"><span>wordcloud <span style="color:#ff6ac1">=</span> WordCloud(
+</span></span><span style="display:flex;"><span>    width<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">800</span>,
+</span></span><span style="display:flex;"><span>    height<span style="color:#ff6ac1">=</span><span style="color:#ff9f43">400</span>,
+</span></span><span style="display:flex;"><span>    stopwords<span style="color:#ff6ac1">=</span>custom_stopwords,  <span style="color:#78787e"># Apply custom stopwords</span>
+</span></span><span style="display:flex;"><span>    background_color<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;white&#39;</span>,  <span style="color:#78787e"># White background for contrast</span>
+</span></span><span style="display:flex;"><span>    colormap<span style="color:#ff6ac1">=</span>f1_theme_cmap  <span style="color:#78787e"># Use the custom colormap</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#ff6ac1">.</span>generate(all_text)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Display the word cloud</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>figure(figsize<span style="color:#04a5e5;font-weight:bold">=</span>(<span style="color:#fe640b">10</span>, <span style="color:#fe640b">5</span>))  <span style="color:#9ca0b0;font-style:italic"># Adjust figure size for better display</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>imshow(wordcloud, interpolation<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;bilinear&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Smooth rendering</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>axis(<span style="color:#40a02b">&#39;off&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Hide the axis</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>title(<span style="color:#40a02b">&#39;Word Cloud of F1 Tweets with Custom Colormap and Stopwords&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Add a title</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>show()  <span style="color:#9ca0b0;font-style:italic"># Render the plot</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Display the word cloud</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>figure(figsize<span style="color:#ff6ac1">=</span>(<span style="color:#ff9f43">10</span>, <span style="color:#ff9f43">5</span>))  <span style="color:#78787e"># Adjust figure size for better display</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>imshow(wordcloud, interpolation<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;bilinear&#39;</span>)  <span style="color:#78787e"># Smooth rendering</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>axis(<span style="color:#5af78e">&#39;off&#39;</span>)  <span style="color:#78787e"># Hide the axis</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>title(<span style="color:#5af78e">&#39;Word Cloud of F1 Tweets with Custom Colormap and Stopwords&#39;</span>)  <span style="color:#78787e"># Add a title</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>show()  <span style="color:#78787e"># Render the plot</span>
 </span></span></code></pre></div><p>
 
 
@@ -421,28 +421,28 @@
 </li>
 </ul>
 <p>Here&rsquo;s an example of how to use a mask image to generate a word cloud:</p>
-<div class="highlight"><pre tabindex="0" style="color:#4c4f69;background-color:#eff1f5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Define the path to the mask image</span>
-</span></span><span style="display:flex;"><span>mask_path <span style="color:#04a5e5;font-weight:bold">=</span> <span style="color:#40a02b">&#39;path/to/your/mask_image.png&#39;</span>  <span style="color:#9ca0b0;font-style:italic"># Update this path to your mask image location</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#78787e"># Define the path to the mask image</span>
+</span></span><span style="display:flex;"><span>mask_path <span style="color:#ff6ac1">=</span> <span style="color:#5af78e">&#39;path/to/your/mask_image.png&#39;</span>  <span style="color:#78787e"># Update this path to your mask image location</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Load the mask image</span>
-</span></span><span style="display:flex;"><span>mask_image <span style="color:#04a5e5;font-weight:bold">=</span> np<span style="color:#04a5e5;font-weight:bold">.</span>array(Image<span style="color:#04a5e5;font-weight:bold">.</span>open(mask_path))
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Load the mask image</span>
+</span></span><span style="display:flex;"><span>mask_image <span style="color:#ff6ac1">=</span> np<span style="color:#ff6ac1">.</span>array(Image<span style="color:#ff6ac1">.</span>open(mask_path))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Generate the word cloud with the mask and custom settings</span>
-</span></span><span style="display:flex;"><span>wordcloud <span style="color:#04a5e5;font-weight:bold">=</span> WordCloud(
-</span></span><span style="display:flex;"><span>    width<span style="color:#04a5e5;font-weight:bold">=</span>mask_image<span style="color:#04a5e5;font-weight:bold">.</span>shape[<span style="color:#fe640b">1</span>],  <span style="color:#9ca0b0;font-style:italic"># Match the mask image width</span>
-</span></span><span style="display:flex;"><span>    height<span style="color:#04a5e5;font-weight:bold">=</span>mask_image<span style="color:#04a5e5;font-weight:bold">.</span>shape[<span style="color:#fe640b">0</span>],  <span style="color:#9ca0b0;font-style:italic"># Match the mask image height</span>
-</span></span><span style="display:flex;"><span>    background_color<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;white&#39;</span>,  <span style="color:#9ca0b0;font-style:italic"># Light background for contrast</span>
-</span></span><span style="display:flex;"><span>    colormap<span style="color:#04a5e5;font-weight:bold">=</span>f1_theme_cmap,  <span style="color:#9ca0b0;font-style:italic"># Use a predefined colormap object</span>
-</span></span><span style="display:flex;"><span>    stopwords<span style="color:#04a5e5;font-weight:bold">=</span>custom_stopwords,  <span style="color:#9ca0b0;font-style:italic"># Apply custom stopwords</span>
-</span></span><span style="display:flex;"><span>    mask<span style="color:#04a5e5;font-weight:bold">=</span>mask_image  <span style="color:#9ca0b0;font-style:italic"># Apply the mask image</span>
-</span></span><span style="display:flex;"><span>)<span style="color:#04a5e5;font-weight:bold">.</span>generate(all_text)
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Generate the word cloud with the mask and custom settings</span>
+</span></span><span style="display:flex;"><span>wordcloud <span style="color:#ff6ac1">=</span> WordCloud(
+</span></span><span style="display:flex;"><span>    width<span style="color:#ff6ac1">=</span>mask_image<span style="color:#ff6ac1">.</span>shape[<span style="color:#ff9f43">1</span>],  <span style="color:#78787e"># Match the mask image width</span>
+</span></span><span style="display:flex;"><span>    height<span style="color:#ff6ac1">=</span>mask_image<span style="color:#ff6ac1">.</span>shape[<span style="color:#ff9f43">0</span>],  <span style="color:#78787e"># Match the mask image height</span>
+</span></span><span style="display:flex;"><span>    background_color<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;white&#39;</span>,  <span style="color:#78787e"># Light background for contrast</span>
+</span></span><span style="display:flex;"><span>    colormap<span style="color:#ff6ac1">=</span>f1_theme_cmap,  <span style="color:#78787e"># Use a predefined colormap object</span>
+</span></span><span style="display:flex;"><span>    stopwords<span style="color:#ff6ac1">=</span>custom_stopwords,  <span style="color:#78787e"># Apply custom stopwords</span>
+</span></span><span style="display:flex;"><span>    mask<span style="color:#ff6ac1">=</span>mask_image  <span style="color:#78787e"># Apply the mask image</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#ff6ac1">.</span>generate(all_text)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#9ca0b0;font-style:italic"># Display the word cloud</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>figure(figsize<span style="color:#04a5e5;font-weight:bold">=</span>(<span style="color:#fe640b">11.25</span>, <span style="color:#fe640b">6.25</span>))  <span style="color:#9ca0b0;font-style:italic"># Adjust figure size for better display</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>imshow(wordcloud, interpolation<span style="color:#04a5e5;font-weight:bold">=</span><span style="color:#40a02b">&#39;bilinear&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Smooth rendering</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>axis(<span style="color:#40a02b">&#39;off&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Hide the axis</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>title(<span style="color:#40a02b">&#39;Enhanced F1 Tweet Word Cloud: Custom Stopwords, Colormap, and Mask Image&#39;</span>)  <span style="color:#9ca0b0;font-style:italic"># Add a title</span>
-</span></span><span style="display:flex;"><span>plt<span style="color:#04a5e5;font-weight:bold">.</span>show()  <span style="color:#9ca0b0;font-style:italic"># Render the plot</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e"># Display the word cloud</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>figure(figsize<span style="color:#ff6ac1">=</span>(<span style="color:#ff9f43">11.25</span>, <span style="color:#ff9f43">6.25</span>))  <span style="color:#78787e"># Adjust figure size for better display</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>imshow(wordcloud, interpolation<span style="color:#ff6ac1">=</span><span style="color:#5af78e">&#39;bilinear&#39;</span>)  <span style="color:#78787e"># Smooth rendering</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>axis(<span style="color:#5af78e">&#39;off&#39;</span>)  <span style="color:#78787e"># Hide the axis</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>title(<span style="color:#5af78e">&#39;Enhanced F1 Tweet Word Cloud: Custom Stopwords, Colormap, and Mask Image&#39;</span>)  <span style="color:#78787e"># Add a title</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff6ac1">.</span>show()  <span style="color:#78787e"># Render the plot</span>
 </span></span></code></pre></div><p>
 
 
