@@ -124,7 +124,7 @@
 
     <h1 class="single-title">Web Scraping and Text Analysis of Travel Trends on Blogs</h1>
     
-    <p class="single-summary">A data-driven exploration of Taiwan travel trends using Naver blog analysis and web scraping</p>
+    <p class="single-summary">A data-driven exploration of Taiwan travel trends using Naver blog analysis and web scraping.</p>
     
 
     
@@ -186,13 +186,13 @@
 </span></span><span style="display:flex;"><span><span style="color:#ff6ac1">from</span> bs4 <span style="color:#ff6ac1">import</span> BeautifulSoup
 </span></span><span style="display:flex;"><span><span style="color:#ff6ac1">import</span> pandas <span style="color:#ff6ac1">as</span> pd
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#78787e"># Chrome options setup</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e">## Chrome options setup</span>
 </span></span><span style="display:flex;"><span>chrome_options <span style="color:#ff6ac1">=</span> Options()
 </span></span><span style="display:flex;"><span>chrome_options<span style="color:#ff6ac1">.</span>add_argument(<span style="color:#5af78e">&#39;--headless&#39;</span>)
 </span></span><span style="display:flex;"><span>chrome_options<span style="color:#ff6ac1">.</span>add_argument(<span style="color:#5af78e">&#39;--no-sandbox&#39;</span>)
 </span></span><span style="display:flex;"><span>chrome_options<span style="color:#ff6ac1">.</span>add_argument(<span style="color:#5af78e">&#39;--disable-dev-shm-usage&#39;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#78787e"># Initialize webdriver</span>
+</span></span><span style="display:flex;"><span><span style="color:#78787e">## Initialize webdriver</span>
 </span></span><span style="display:flex;"><span>driver <span style="color:#ff6ac1">=</span> webdriver<span style="color:#ff6ac1">.</span>Chrome(options<span style="color:#ff6ac1">=</span>chrome_options)
 </span></span></code></pre></div><p>You can verify the setup with:</p>
 <div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff6ac1">try</span>:
@@ -206,16 +206,16 @@
 </span></span></code></pre></div><h2 id="text-pre-processing-and-analysis">Text Pre-processing and Analysis</h2>
 <h3 id="pre-processing-methodology">Pre-processing Methodology</h3>
 <p>I applied several text preprocessing techniques, including HTML tag removal, special character cleaning, case normalization, tokenization, and morphological analysis. Through this process, I learned that selecting appropriate stopwords is crucial regardless of language.</p>
-<p>Even after using <a href="https://gist.github.com/spikeekips/40eea22ef4a89f629abd87eed535ac6a">stopwords-ko.txt</a> from spikeekips&rsquo; Gist on GitHub, the crawled data contained unexpected technical terms like &lsquo;pzp&rsquo;, &lsquo;pc&rsquo;, &lsquo;hdp&rsquo;, and &lsquo;hd&rsquo; that required additional cleaning. This experience reinforced that thorough preprocessing is essential for accurate analysis.</p>
+<p>Even after using <a href="https://gist.github.com/spikeekips/40eea22ef4a89f629abd87eed535ac6a">stopwords-ko.txt</a> from spikeekips&rsquo; Gist on GitHub, the crawled data contained unexpected technical terms like <em>&lsquo;pzp&rsquo;, &lsquo;pc&rsquo;, &lsquo;hdp&rsquo;,</em> and <em>&lsquo;hd&rsquo;</em> that required additional cleaning. This experience reinforced that thorough preprocessing is essential for accurate analysis.</p>
 <h3 id="text-analysis-results">Text Analysis Results</h3>
 <h4 id="keyword-analysis">Keyword Analysis</h4>
-<p>The most frequently appearing terms included Taiwan, Taipei, travel, tour, night market, hotel, photo, and people.</p>
+<p>The most frequently appearing terms included <em>Taiwan, Taipei, travel, tour, night market, hotel, photo,</em> and <em>people.</em></p>
 <h4 id="sentiment-distribution">Sentiment Distribution</h4>
 <p>Most posts exhibited positive sentiment, focusing on travel experiences and recommendations. Representative examples included:</p>
 <ul>
-<li>Neutral: &ldquo;4 nights and 5 days in Taiwan, traveling around and eating nonstop…&rdquo;</li>
-<li>Positive: &ldquo;A 3-day tour of Taiwan, a free tour around Taipei packed with experiences…&rdquo;</li>
-<li>Positive: &ldquo;Visiting the Taipei Fun Pass, with a summary of travel expenses and photos…&rdquo;</li>
+<li>Neutral: <em>&ldquo;4 nights and 5 days in Taiwan, traveling around and eating nonstop…&rdquo;</em></li>
+<li>Positive: <em>&ldquo;A 3-day tour of Taiwan, a free tour around Taipei packed with experiences…&rdquo;</em></li>
+<li>Positive: <em>&ldquo;Visiting the Taipei Fun Pass, with a summary of travel expenses and photos…&rdquo;</em></li>
 </ul>
 <h4 id="topic-categories">Topic Categories</h4>
 <p>The content fell into five main categories:</p>
@@ -227,7 +227,7 @@
 <li><strong>Travel Logistics</strong> — Transportation guidance, eSIM information, and accommodation details</li>
 </ol>
 <h4 id="word-cloud">Word Cloud</h4>
-<p>It showed similar keywords to those in other analyses, such as Taiwan, travel, Taipei, hotel, night markets, tours, airport, and photos.
+<p>It showed similar keywords to those in other analyses, such as <em>Taiwan, travel, Taipei, hotel, night markets, tours, airport,</em> and <em>photos.</em>
 
 
 
@@ -248,17 +248,17 @@
     
 </figure></p>
 <h2 id="key-findings">Key Findings</h2>
-<p>From a data analysis perspective, the results closely matched my expectations. When searching for travel information in Korean, I found a strong emphasis on food, travel tips, must-bring items, and detailed itinerary suggestions. This aligns with the types of content I anticipated encountering.</p>
-<p>From a technical perspective, this project reinforced that text preprocessing is critical for any data analysis. While I performed basic text cleaning for this pet project, I recognized that for larger-scale or corporate projects aimed at deriving meaningful customer insights, comprehensive and accurate data cleaning is a necessity.</p>
+<p><strong>From a data analysis perspective,</strong> the results closely matched my expectations. When searching for travel information in Korean, I found a strong emphasis on food, travel tips, must-bring items, and detailed itinerary suggestions. This aligns with the types of content I anticipated encountering.</p>
+<p><strong>From a technical perspective,</strong> this project reinforced that text preprocessing is critical for any data analysis. While I performed basic text cleaning for this pet project, I recognized that for larger-scale or corporate projects aimed at deriving meaningful customer insights, comprehensive and accurate data cleaning is a necessity.</p>
 <h2 id="future-directions">Future Directions</h2>
 <p>Although this is a small-scale project, I believe the experience gained in web scraping, text preprocessing, and text analysis will be invaluable for future projects. If I get the opportunity to work on text analysis again, I plan to explore more advanced techniques for text data visualization and implement more sophisticated text cleaning methods to improve the accuracy and depth of the analysis.</p>
 <p>While I didn&rsquo;t delve into explaining the code in detail in this post, you can check out the full code in my GitHub repository: <a href="https://github.com/KwonNayeon/medium-post-projects/tree/main">KwonNayeon/medium-post-projects</a>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://developers.naver.com/main/">Naver Developer API</a> for web scraping</li>
-<li><a href="https://developer-woo.tistory.com/60">Python-based Naver blog crawling tutorial</a> by dev-woo</li>
+<li><em><a href="https://developer-woo.tistory.com/60">Python-based Naver blog crawling tutorial</a></em> by dev-woo</li>
 <li><a href="https://gist.github.com/spikeekips/40eea22ef4a89f629abd87eed535ac6a">stopwords-ko.txt</a> from spikeekips&rsquo; Gist on GitHub</li>
-<li><a href="https://brunch.co.kr/@8d1b089f514b4d5/33">합법적으로 &lsquo;웹 크롤링&rsquo;하는 방법 (上)</a> by 삼더하기일</li>
+<li><em><a href="https://brunch.co.kr/@8d1b089f514b4d5/33">합법적으로 &lsquo;웹 크롤링&rsquo;하는 방법 (上)</a></em> by 삼더하기일</li>
 </ul>
 
     
