@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content="This post consolidates insights from reading &#39;Growth Hacking,&#39; focusing on the AARRR framework, data operations, and A/B testing principles. It reflects on the transition from government to private sector data science, while exploring practical applications in MLOps and data-driven decision making."/>
+
+<title>
+    
+    Growth Hacking: A Data Scientist&#39;s Journey Through Product Analytics | Data Journal
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/book-review/"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.a6824bbee0d90d5af09fed9b70395ce7076b615e315037455d903314e96ef91b.css" media="all">
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">Data Journal</h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /Home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/my-project/" >
+                /Portfolio
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts/" >
+                /Posts
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/book-review/">Growth Hacking: A Data Scientist&#39;s Journey Through Product Analytics</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Growth Hacking: A Data Scientist&#39;s Journey Through Product Analytics</h1>
+    
+    <p class="single-summary">A three-part series on growth hacking in data science through a career transition lens.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-11-22T00:00:00&#43;00:00">November 22, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      3 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p><em>This post combines a series of LinkedIn articles written as part of the Data Next Level Challenge. You can find the original posts here:</em></p>
+<ul>
+<li><a href="https://www.linkedin.com/posts/kwonnayeon_qzustwtpsreesjm-qzustwtpsqofswmtxurwarsotroreitfm-activity-7260552510774419456-vdmR?utm_source=share&amp;utm_medium=member_desktop">Part 1: Why I Started This Journey</a> <em>(Published: November 8, 2024)</em></li>
+<li><a href="https://www.linkedin.com/posts/kwonnayeon_qzustwtpsreesjm-qzustwtpsqofswmtxurwarsotroreitfm-activity-7262378836338593792-1lN9?utm_source=share&amp;utm_medium=member_desktop">Part 2: AARRR Framework &amp; Metrics Analysis</a> <em>(Published: November 13, 2024)</em></li>
+<li><a href="https://www.linkedin.com/posts/kwonnayeon_qzustwtpsreesjm-qzustwtpsqofswmtxurwarsotroreitfm-activity-7264929548645875712-ZG8y?utm_source=share&amp;utm_medium=member_desktop">Part 3: Implementation &amp; Practical Insights</a> <em>(Published: November 20, 2024)</em></li>
+</ul>
+<p>As part of the Data Next Level Challenge, I embarked on a three-week journey reading &ldquo;Growth Hacking&rdquo; to deepen my understanding of data analytics and connect with fellow data enthusiasts. This post compiles my complete review series, sharing key insights and personal reflections from this learning experience.</p>
+<h2 id="why-i-took-this-challenge">Why I Took This Challenge</h2>
+<p>Coming from a government background with no private sector experience, I&rsquo;ve often felt uncertain about product sense and case study interviews. During my career transition, I&rsquo;ve been contemplating my true career aspirations. While I initially focused on becoming a data scientist solving business problems, I&rsquo;ve recently developed an interest in MLOps. I believed reading industry-focused books would help clarify my career path.</p>
+<h2 id="key-insights-from-chapters-3-4-the-aarrr-framework">Key Insights from Chapters 3-4: The AARRR Framework</h2>
+<h3 id="core-principles-for-metrics-analysis">Core Principles for Metrics Analysis</h3>
+<ol>
+<li>
+<p><strong>Accurate Data Tracking</strong></p>
+<ul>
+<li>Proper tracking of user acquisition sources (Google ads, affiliate marketing, referral programs)</li>
+<li>Emphasis on comprehensive data collection without omissions</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Segmentation</strong></p>
+<ul>
+<li>Breaking down data by cohorts for meaningful insights</li>
+<li>Importance of user grouping for revenue-based decisions</li>
+</ul>
+</li>
+<li>
+<p><strong>Customer-Centric Analysis</strong></p>
+<ul>
+<li>Focus on broader understanding of customers through metrics</li>
+<li>Building consensus around metric definitions across teams</li>
+</ul>
+</li>
+</ol>
+<h3 id="personal-reflections">Personal Reflections</h3>
+<p>What struck me most was learning how data scientists dedicate significant time to &ldquo;clarifying requirements.&rdquo; This resonated with a conversation I had during a coffee chat with a retail sector data scientist, who shared that the most challenging and time-intensive aspect of their work is translating business problems into data problems.</p>
+<p>The chapter covering fundamental statistical concepts like Simpson&rsquo;s paradox and survivorship bias was particularly engaging, as it connected with my existing knowledge while adding practical context.</p>
+<h2 id="deep-dive-into-chapters-5-6-practical-implementation">Deep Dive into Chapters 5-6: Practical Implementation</h2>
+<h3 id="key-learnings-about-data-operations">Key Learnings about Data Operations</h3>
+<ol>
+<li>
+<p><strong>Standardized Terminology</strong></p>
+<ul>
+<li>Clear definition of terms like &ldquo;data pipeline&rdquo; across teams (the process of data collection, transformation, extraction, and utilization for decision-making)</li>
+<li>Importance of aligned understanding between data scientists, engineers, and marketers</li>
+</ul>
+</li>
+<li>
+<p><strong>A/B Testing Best Practices</strong></p>
+<ul>
+<li><strong>Managing confounding variables:</strong> A confounder affects the dependent variable without being an independent variable. Proper control of confounders significantly impacts experimental results</li>
+<li><strong>Strict sampling criteria:</strong> Random sampling isn&rsquo;t achieved simply by dividing subjects into odd/even numbers without careful consideration of confounders</li>
+<li><strong>Evaluating A/B test value:</strong> The value of an A/B test should be judged not only by the p-value of the test results but also by considering the practical magnitude and impact of the experimental effects</li>
+</ul>
+</li>
+</ol>
+<h3 id="practical-applications">Practical Applications</h3>
+<p>The book&rsquo;s discussion of various services for building data pipelines has been particularly relevant to my personal projects, covering:</p>
+<ul>
+<li>Cloud environments</li>
+<li>ETL automation</li>
+<li>BI services</li>
+</ul>
+<h2 id="looking-forward">Looking Forward</h2>
+<p>This reading challenge has provided valuable insights into the practical aspects of data science in the private sector. As someone working on personal projects, I plan to:</p>
+<ol>
+<li>Revisit the book for deeper understanding</li>
+<li>Practice with the mentioned tools and resources</li>
+<li>Apply these growth hacking principles in real-world situations</li>
+</ol>
+<p><em>A key takeaway: Just as UX designers need more than just the right mindset, becoming an effective data scientist requires both the mindset and the practical skills to implement data-driven decision-making processes.</em></p>
+<hr>
+<p><em>Originally published as a three-part series on LinkedIn between November 8-20, 2024. This consolidated version aims to provide a comprehensive overview of my learning journey through &ldquo;Growth Hacking&rdquo; and its applications in data science.</em></p>
+
+    
+  </div>
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+
+    </footer>
+    
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
