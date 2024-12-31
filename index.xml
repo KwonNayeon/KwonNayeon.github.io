@@ -6,8 +6,15 @@
     <description>Recent content in Home on Data Journal</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Half of 2024 Reflection</title>
+      <link>http://localhost:1313/posts/reflection_2024/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reflection_2024/</guid>
+      <description>A reflection on my journey of transition and growth in the latter half of 2024.</description>
+    </item>
     <item>
       <title>Growth Hacking: A Data Scientist&#39;s Journey Through Product Analytics</title>
       <link>http://localhost:1313/posts/book-review/</link>
