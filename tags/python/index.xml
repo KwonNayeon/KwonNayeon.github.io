@@ -15,12 +15,5 @@
       <guid>http://localhost:1313/posts/crawling_pet_project/</guid>
       <description>A data-driven exploration of Taiwan travel trends using Naver blog analysis and web scraping.</description>
     </item>
-    <item>
-      <title>Deep Dive into Word Cloud Creation</title>
-      <link>http://localhost:1313/posts/f1_visualization/</link>
-      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/f1_visualization/</guid>
-      <description>A step-by-step tutorial on creating visually compelling word clouds using Python.</description>
-    </item>
   </channel>
 </rss>
